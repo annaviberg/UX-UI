@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>UX/UI Pages Evaluation</title>
+    <style>
+        a {
+            text-decoration: none; 
+            font-weight:bold
+        }
+
+            a:hover {
+                text-decoration:underline
+            }
+    </style>
+    <script type="text/javascript">
+
+        function ChangeList(page) {
+
+            document.getElementById("listICA").style.display = 'none';
+            document.getElementById("listET").style.display = 'none';
+            document.getElementById("listHG").style.display = 'none';
+            document.getElementById("listMY").style.display = 'none';
+
+
+            switch (page) {
+                case "ica":
+                    document.getElementById("listICA").style.display = 'inline';
+                    break;
+                case "et":
+                    document.getElementById("listET").style.display = 'inline';
+                    break;
+                case "hg":
+                    document.getElementById("listHG").style.display = 'inline';
+                    break;
+                case "my":
+                    document.getElementById("listMY").style.display = 'inline';
+                    break;
+                default:
+                    alert("Error page not found!");
+                    break;
+            }
+        }
+
+    </script>
+</head>
+<body style="font-family:Arial">
+    <table style="width:100%">
+        <tr id="trHeader">
+            <td style="font-size:small">
+                <a id="linkICA" onclick="ChangeList('ica')" href="https://www.ica.se/recept/" target="pageContent" style="color:forestgreen">ICA Recept</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a id="linkET" onclick="ChangeList('et')" href="http://www.europeantour.com/" target="pageContent" style="color:forestgreen">European Tour</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a id="linkHG" onclick="ChangeList('hg')" href="http://haningegolfhall.se/" target="pageContent" style="color:red">Haninge Golfhall</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a id="linkICA" onclick="ChangeList('my')" href="https://annaviberg.github.io/Garage1/" target="pageContent" style="color:dodgerblue">Min version av Deluxe Parkering</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <iframe id="pageContent" name="pageContent" style="width:100%; height:500px; border:1px solid black" src="startpage.html"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-left:0px; font-size:16px; font-family:Calibri">
+                <div style="height:100px; column-count:3; column-fill:balance; column-rule: 1px solid lightgray; vertical-align:text-top">
+                    <ul id="listICA" style="display:none; list-style-type:none">
+                        <li>+ Bra färgsättning</li>
+                        <li>+ Lätt att navigera på sidan</li>
+                        <li>+ Bra sökfunktion</li>
+                        <li>+ Lätt att sortera ut det man vill ha</li>
+                        <li>+ Smarta "tips" funktioner om recept</li>
+                        <li>+ Bra typsnitt/lättläst</li>
+                        <li>+ Lätt att se vad andra tycker om recepten</li>
+                        <li>+ Bra strukturering av recepten</li>
+                        <li>+ Bra att man kan klicka in de steg man har gjort</li>
+                        <li>+ Timer funktionen</li>
+                        <li>+ Lägga till ingredienserna i inköpslista</li>
+                        <li>+ Man behöver inte vara meddlem för de flesta funktioner</li>
+                    </ul>
+                    <ul id="listET" style="display:none; list-style-type:none">
+                        <li><b>Björn, 51årig Kökschef med MYCKET liten datorvana</b></li>
+                        <li>+ Lätt att hitta</li>
+                        <li>+ Uppdaterad information</li>
+                        <li>+ Ingen onödig information</li>
+                        <li>+ Behaglig att titta på (4h i sträck)</li>
+                        <li>+ Sidan är snabb</li>
+                        <li>+ Bra video spelare</li>
+                        <li>+ Lite reklam</li>
+                        <li>+ Den reklam som finns är relevant</li>
+                        <li>+ Inga jobbiga färger</li>
+                        <li>+ Man känner igen sig</li>
+                    </ul>
+                    <ul id="listHG" style="display:none; list-style-type:none">
+                        <li>- Dåliga färger på speciellt texter</li>
+                        <li>- Massa olika typsnitt</li>
+                        <li>- Informationen är inte uppdaterad</li>
+                        <li>- Dåligt designad, då text trycks ihop</li>
+                        <li>- Oklart vart man ska klicka</li>
+                        <li>- Länk bort från sidan i stället för ny tag</li>
+                        <li>- Konstiga mellanrum i texter</li>
+                        <li>- Tråkiga, omotiverande bilder</li>
+                        <li>- Långsam helt utan anledning</li>
+                        <li>- Ikoner som ej går att tyda</li>
+                        <li>- Man blir omotiverad att åka dit (men gör det iaf)</li>
+                    </ul>
+                    <ul id="listMY" style="display:none; list-style-type:none">
+                        <li>+ Enhetligt intryck</li>
+                        <li>+ Lätt att navigera</li>
+                        <li>+ Lätt att komma åt kontakt info</li>
+                        <li>+ Lättläst typsnitt</li>
+                        <li>+ Relevanta ikoner</li>
+                        <li>+ Lätt att förstå vilken info man ska ange</li>
+                        <li>- Skulle haft en meny längst ned på sidan</li>
+                        <li>- Den skulle kunna se mycket mer Deluxe ut</li>
+                        <li>- Ger ett tråkigt intryck</li>
+                        <li>- Skulle varit fullt responsive</li>
+                        <li>- Mer ikoner och tooltips</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
